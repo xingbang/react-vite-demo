@@ -8,11 +8,15 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "eslint": "eslint --max-warnings=0",
-    "pre-check": "tsc && npx lint-staged"
+    "pre-check": "tsc && npx lint-staged",
+    "stylelint": "stylelint"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "npm run eslint"
+    ],
+    "src/**/*.{css,less,scss}": [
+      "npm run stylelint"
     ]
   },
   "dependencies": {
@@ -31,6 +35,11 @@
     "eslint-plugin-react": "^7.31.8",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "stylelint": "^14.11.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-less": "^1.0.6",
+    "stylelint-order": "^5.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
   }
